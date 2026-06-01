@@ -1,33 +1,30 @@
 import { useState } from 'react'
-import './App.css'
 
 export default function Register() {
-  const [form, setForm] = useState({ name: '', email: '', password: '', confirm: '' })
+  const [form, setForm] = useState({ name: '', username: '', email: '', phone: '', age: '', address: '' })
   const [message, setMessage] = useState('')
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (!form.name || !form.email || !form.password) {
+    if (!form.name || !form.username || !form.email || !form.phone || !form.age || !form.address) {
       setMessage('Please fill all required fields.')
       return
     }
-    if (form.password !== form.confirm) {
-      setMessage("Passwords don't match.")
-      return
-    }
     setMessage('Registered successfully (demo).')
-    console.log('Registered', { name: form.name, email: form.email })
-    setForm({ name: '', email: '', password: '', confirm: '' })
+    console.log('Registered', form)
+    setForm({ name: '', username: '', email: '', phone: '', age: '', address: '' })
   }
 
   return (
     <form className="register-form" onSubmit={handleSubmit}>
       <h2>Register</h2>
       <input name="name" value={form.name} onChange={handleChange} placeholder="Full name" />
+      <input name="username" value={form.username} onChange={handleChange} placeholder="Username" />
       <input name="email" value={form.email} onChange={handleChange} placeholder="Email" />
-      <input name="password" type="password" value={form.password} onChange={handleChange} placeholder="Password" />
-      <input name="confirm" type="password" value={form.confirm} onChange={handleChange} placeholder="Confirm password" />
+      <input name="phone" value={form.phone} onChange={handleChange} placeholder="Phone number" />
+      <input name="age" type="number" value={form.age} onChange={handleChange} placeholder="Age" />
+      <input name="address" value={form.address} onChange={handleChange} placeholder="Address" />
       <button type="submit">Create account</button>
       {message && <p className="form-message">{message}</p>}
     </form>

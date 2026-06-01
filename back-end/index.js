@@ -21,30 +21,6 @@ app.get('/', (req, res) => {
   res.send('My first API')
 })
 
-// POST /register — สมัครสมาชิกใหม่
-app.post('/register', (req, res) => {
-
-})
-
-// GET /users — ดู user ทั้งหมด
-app.get('/users', (req, res) => {
-
-})
-
-// GET /users/:id — ดู user ตาม id
-app.get('/users/:id', (req, res) => {
-
-})
-
-// PUT /users/:id — แก้ไขข้อมูล user
-app.put('/users/:id', (req, res) => {
-
-})
-
-// DELETE /users/:id — ลบ user
-app.delete('/users/:id', (req, res) => {
-
-})
 
 const port = 3000;
 const host = 'localhost';

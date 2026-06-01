@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>call</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        ul{
+            list-style-type:circle;
+        }
+    
+       
+  
+
+    
+        .box{
+            background-color: rgb(58, 177, 242);
+            color: rgb(169, 0, 113);
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+        .center{
+            text-align: center;
+        }
+    
+
+        #myid{
+            background-color: rgb(142, 240, 171);
+            color: rgb(22, 0, 147);
+            border: 1px solid rgb(245, 186, 186);
+            margin: 10px;
+            padding: 10px;
+        }
+   
+
+
+ 
+        body{
+            width: 500px;
+            margin: 0 auto;
+        }
+        header{
+            height: 50px;
+            background-color: rgb(255, 0, 0);
+        }
+        nav{
+            height: 25px;
+            background-color: rgb(0, 255, 0);
+        }
+        /* สำคัญมาก */
+        section{
+            float: left;
+            width: 180px;
+            hight: 100px;
+            background-color: rgb(121, 121, 202);
+        }
+        aside{
+            float: left;
+            width: 320px;
+            hight: 100px;
+            background-color: rgb(255, 255, 0);
+        }
+        /*สำคัญมาก*/
+        footer{
+            clear: both;
+            height: 50px;
+            background-color: rgb(0, 255, 255);
+        }
+  
+
+/* register form */
+    
+    #register{
+        color: rgb(25 155 32);
+        border: 1px solid rgb(255, 0, 255);
+        margin: 20px;
+        padding-left: 200px;
+    }
+
+/* font มีในเครื่อง */
+/*  body{
+     font-family:'Tahoma';
+    }
+*/
+
+/* font ที่ไม่มีในเครื่อง ต้องใช้ @font-face */
+/*      @font-face {
+        font-family: 'PlayfairDisplay';
+        src: url('./PlayfairDisplay.ttf');
+    }
+        */
+
+
+    /*แบ่ง left กับ right*/
+    /*flex-grow ให้แต่ละชิ้นมีความยาวสึดเท่าไหร่ากัน*/
+    .container{
+       display: flex;
+    }
+    .item-Left{
+        background-color: rgb(255, 0, 255);
+        flex: 1;
+    }
+    .item-Right{
+        background-color: rgb(0, 255, 255);
+        flex: 1;
+    }
+
+      
+    </style>
+</head>
+    
+
+<body>
+    <!-- <h1>Hi,CSS</h1> -->
+    <p>This is a simple paragraph.</p> 
+    <b>1.Bold Text</b>
+    <br>
+    <strong>2.Strong Text</strong>
+    <br>
+    <i>3.Italic Text </i>
+    <br>
+    <em>4.Emphasis Text</em>
+    <br>
+    <mark>5.Marked Text</mark>
+    <br>
+    <small>6.Small Text</small>
+    <br>
+    <del>7.Deleted Text</del>
+    <br>
+    <ins>8.Inserted Text</ins>
+    <br>
+    <b>9.Bold Text</b>
+    <sub>10.Subscript Text</sub>
+    <sup>11.Superscript Text</sup>
+    <br>
+
+    <!--link and old tab-->
+    <a title="Typing Lesson" href="https://www.typing.com/student/lesson/324/beginner-wrap-up">click here</a>
+    <br>
+
+    <!--open in new tab-->
+    <a href="https://www.typing.com/student/lesson/324/beginner-wrap-up" target="_blank">click here2</a>
+    <br>
+
+    <!--image in website-->
+    <img src="https://th.portal-pokemon.com/play/resources/pokedex/img/pm/5794f0251b1180998d72d1f8568239620ff5279c.png" alt="pokemons1">
+    <br>
+    
+    <!--kick image will be youtube-->
+    <a href="https://www.youtube.com/"target="_blank">
+            <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/133.png" alt="pokemons2">
+    </a>
+    <br>
+
+    <!--image-->
+    <img src="img/pokemon.png" alt="pokemons">
+
+    <!--block and inline image-->
+    <img src="img/Block_inline.png" alt="Block_inline">
+    <br>
+
+    <!--table-->
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>30</td>
+        </tr>
+    </table>
+    <br>
+
+    <!--unordered list-->
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <br>
+
+    <!--ordered list-->
+    <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>   
+
+    <!--form-->  
+    <form>
+        <fieldset>
+            <legend>
+                registration form
+            </legend>
+<div class="register form">
+            <label for="firstname">Name:</label>
+            <input type="text" placeholder="Enter your firstname..."> 
+            <br>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" placeholder="Enter your lastname...">
+            <br>
+
+            <label for="gender">select Gender :</label>
+            <br>
+            <input type="radio" name="gender" value="male" checked> Male
+            <input type="radio" name="gender" value="female" > Female
+            <br>
+
+            <input type="checkbox" value="value1" name="value1"> checkbox1
+            <input type="checkbox" value="value2" name="value2"> checkbox2
+            <input type="checkbox" value="value3" name="value3"> checkbox3
+            <br>
+
+            <input type="submit" value="Submit">
+</div>
+        </fieldset>
+    </form>
+    <br>
+
+    <!--Block elements-->
+    <div>
+        This is a block elements
+    </div>
+
+    <!--inline element-->
+    <a href="#">This is an inline element</a>
+    <a href="#">This is an inline element</a>
+    <a href="#">This is an inline element</a>
+
+    <!--class-->
+   <div class="box">
+        <h2>This is a box 1</h2>
+        <p>This is some text inside the box.</p>
+   </div>
+   <div class="box">
+        <h2>This is a box 2</h2>
+        <p>This is some text inside the box.</p>
+   </div>
+
+   <p class="box">This is a box 4</p>
+
+   <!--multiple classes and center-->
+   <div class="box center">
+        <h2>This is a box 3</h2>
+        <p>This is some text inside the box.</p>
+   </div>
+
+   <!--id-->
+   <div id="myid"> my id </div>
+
+   <!--iframe คือ สร้างเว็ปในเว็ปอื่น  --> <!--frameborder 1=มีเส้นขอบ 0=ไม่มีเส้นขอบ-->
+   <iframe src="iframe.html" width="600" height="400" frameborder="1"></iframe>
+
+   <!--youtube-->
+   <iframe width="400" height="200" src="https://www.youtube.com/embed/jzRE0HXm9NY?si=OHpHUINuhx_9pIJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+   <!-- Entities-->
+   <!-- HTML5 Entities  
+       Result Description               Entity Name           Entity Number
+              non-breaking space        &nbsp;                &#160;
+            < less than                 &lt;                  &#60;
+            > greater than              &gt;                  &#62;                                
+            & ampersand                 &amp;                 &#38;
+            " double quote              &quot;                &#34;
+            ' single quote              &apos;                &#39;
+              cent                      &cent;                &#162;
+              pound sterling            &pound;               &#163;
+              yen                       &yen;                 &#165;    
+              euro                      &euro;                &#8364;
+              copyright                 &copy;                &#169;
+              registered trademark      &reg;                 &#174;
+-->
+<p>
+    This is how to use entities: exmple &lt; p &gt;
+</p>
+
+<!--semantic Elements
+    <article> Defines an article
+    <aside> Defines content aside from the page content
+    <details> Defines additional details that the user can view or hide
+    <figcaption> Defines a caption for a <figure> element
+    <figure> Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+    <footer> Defines a footer for a document or section
+    <header> Defines a header for a document or section
+    <main> Specifies the main content of a document
+    <mark> Defines marked/highlighted text
+    <nav> Defines navigation links
+    <section> Defines a section in a document
+    <summary> Defines a visible heading for a <details> element
+    <time> Defines a specific time (or datetime)
+-->
+
+<header>
+    header 
+</header>
+<nav>
+    nav 
+</nav>
+<section>
+    section       
+</section>
+<aside>
+    aside    
+</aside>
+<footer>
+    footer   
+</footer>
+
+<div id="register">
+    Register from 
+</div>
+
+<div class="container">
+    <div class="item-Left">Left</div>
+    <div class="item-Right">Right</div>
+</div>
+
+</body>
+</html>

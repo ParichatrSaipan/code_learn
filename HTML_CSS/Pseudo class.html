@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo selectors</title>
+    <style>
+        
+         .button{
+            background-color: rgb(81, 81, 234);
+            border: 0;
+            padding: 10px;
+        }
+        /* button เมื่อวางเมาส์ hover*/
+         .button:hover{
+            background-color: rgb(255, 57, 57);
+        }
+
+        /*button เปลี่ยนสีได้เมื่อ active*/
+         .button:active{
+            background-color: rgb(81, 193, 234);
+        }
+
+        /*button เปลี่ยนสีได้เมื่อ focus สีจะติดค้าง*/
+        .button:focus{
+            background-color: rgb(81, 234, 181);
+        }
+        
+        input:focus{
+            background-color: rgb(81, 234, 181);
+        }
+        
+        .container .item:first-child{
+            background-color: rgb(212, 110, 110);
+        }
+        .container .item:last-child{
+             background-color: rgb(110, 212, 110);
+        }
+        .container .item:nth-child(2){
+            background-color: rgb(110, 110, 212);
+        }
+    </style>
+</head>
+<body>
+    <button class="button">Button</button>
+    <input type="text" name="username">
+
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>  
+        <div class="item">Item 3</div>
+    </div>
+</body>
+</html>

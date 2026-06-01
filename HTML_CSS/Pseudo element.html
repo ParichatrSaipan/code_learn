@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo element</title>
+    <style>
+        /*ทำให้ตัวอักษรตัวแรกของ element ตัวใหญ่ขึ้น*/
+        .mike:first-letter{
+            font-size: 50px;
+            color: rgb(41, 33, 203);
+        }
+        /*แทรก กลายเป็นตัวอักษรที่อยู่หน้าคำว่า Mike*/
+        .mike::before{
+            content: '?';
+          
+        }
+
+        /*แทรก กลายเป็นตัวอักษรที่อยู่หลังคำว่า Mike*/
+        .mike::after{
+            content: '?';
+        }
+
+        .mike::after{
+            content: '😊';
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="mike">Mike</div>
+</body>
+</html>

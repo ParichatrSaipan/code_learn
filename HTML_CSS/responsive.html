@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+    <style>
+        /*1.เปลี่ยนสีแค่ลูกของ container */
+        .container .item{
+            background-color: rgb(212, 110, 110);
+        }
+
+        /*2 นิยมใช้กับ container แค่ชั้นเดียว */
+        .main-container > .item{
+            background-color: rgb(110, 212, 110);
+            padding: 10px;
+        }
+
+        /*3 นิยมใช้กับปุ่ม*/
+        .button{
+         border: 0;
+         background-color: rgb(81, 81, 234);
+         padding: 10px;
+        }
+        .button.active{
+         background-color: rgb(234, 81, 81);
+        }
+
+        /*4*เลือก element ที่อยู่ติดกัน*/
+        .item1 + .item2{
+            background-color: rgb(110, 110, 212);
+        }
+
+        /*5 attribute selector */
+        input[type=text]{
+            border: 1px solid black;
+            height: 100px;
+        }
+
+       
+    </style>
+
+
+</head>
+
+
+<body>
+    <!-- 1. .item เป็นลูกของ .container -->
+    <div class="container">
+        Container
+        <div class="item">
+            Item
+        </div>
+    </div>
+
+    <div class="footer-container">
+         Container
+        <div class="item">
+            Item
+        </div>
+    </div>
+
+    <!-- 2. .item เป็นลูกของ container แค่ชั้นเดียว -->
+     <div class="main-container">
+         Container
+        <div class="item">
+            Item 1
+           <div class="item">
+                Item 2
+            </div>
+            <div class="item">
+                Item 3
+            </div>
+            
+        </div>
+    </div>
+
+    <!--3. มี class ที่ติดกัน -->
+    <button class="button">button here</button>
+    <button class="button active">button here</button>
+
+    <!--4. เพื่อนกัน(adjacent) -->
+    <div class="item1">Item 1</div>
+    <div class="item2">Item 2</div>
+    <div class="item3">Item 3</div>
+
+    <!--5. attribute selector -->
+    <input type="text" name="username">
+    <input type="text" name="lastname">
+    <input type="text" name="description">
+
+    
+</body>
+</html>

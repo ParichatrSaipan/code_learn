@@ -52,7 +52,7 @@
    ```bash
    node index.js
    ```
-or
+   or
 
    ```bash
    npx nodemon index.js # auto restart server when code change

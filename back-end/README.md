@@ -15,6 +15,11 @@ npm install express # rest api framework
 ```bash
 node index.js
 ```
+or 
+
+```bash
+npx nodemon index.js # auto restart server when code change
+```
 
 4. Add code about Start API
 

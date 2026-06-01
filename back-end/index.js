@@ -4,7 +4,9 @@ app.use(express.text());
 app.use(express.json());
 
 
-
+app.get('/', (req, res) => {
+  res.send('My first API')
+})
 
 const port = 3000;
 const host = 'localhost';

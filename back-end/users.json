@@ -1,0 +1,20 @@
+[
+  {
+    "id": 2,
+    "name": "Bob Johnson",
+    "username": "bob99",
+    "email": "bob@example.com",
+    "phone": "0822222222",
+    "age": 25,
+    "address": "456 Chiang Mai"
+  },
+  {
+    "id": 3,
+    "name": "Peeradon Ruengkaew",
+    "username": "peeradonmoke2002",
+    "email": "you23tubepreimumsbs2002@gmail.com",
+    "phone": "0822222222",
+    "age": "22",
+    "address": "126 Pracha Uthit Rd, Bang Mot, Thung Khru, Bangkok"
+  }
+]

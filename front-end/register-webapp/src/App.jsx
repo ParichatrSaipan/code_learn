@@ -2,7 +2,7 @@ import Header from './components/header.jsx'
 import Register from './components/Register.jsx'
 import UserList from './components/UserList.jsx'
 import EditUser from './components/EditUser.jsx'
-import useUsers from './hooks/useUsers.js'
+import useUsers from './data/useUsers.js'
 
 export default function App() {
   const { users, editingUser, setEditingUser, addUser, editUser, removeUser } = useUsers()
